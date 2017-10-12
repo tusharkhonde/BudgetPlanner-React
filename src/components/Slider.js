@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { FormControl,ControlLabel } from 'react-bootstrap';
-import moment from 'moment';
 import { addBalance } from '../actions';
 
 class Slider extends Component{
@@ -26,7 +25,6 @@ class Slider extends Component{
     }
 
     onSubmit(){
-        console.log(this.state);
         this.props.addBalance({
             balance: this.state.balance,
             date: this.state.date

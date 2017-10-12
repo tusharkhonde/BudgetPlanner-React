@@ -21,17 +21,7 @@ class AddEvent extends Component{
         items['id'] = uuid();
         this.props.addExpense(items);
     }
-    clearFields(e){
-        e.preventDefault();
-        var date = this.refs.date;
-        var frequency = this.refs.frequency;
-        var amount = this.refs.amount;
-        console.log(date);
-        date.value = "";
-        frequency.value = "";
-        amount.value = "";
-    }
-
+ 
     render(){
         const date = this.props.eventBalances.currentDate;   
         const start = moment(date).startOf('month').format('YYYY-MM-DD').toString();
@@ -85,10 +75,7 @@ class AddEvent extends Component{
                             </FormControl>
                             <br/><br/>
                             <div className="btn" id="add-button"
-                                    onClick={event=>{
-                                        this.addEvent(this.state);
-                                        this.clearFields(event);
-                                    }}    
+                                    onClick={event=>{ this.addEvent(this.state)}}    
                             >
                                     Add Event
                             </div>

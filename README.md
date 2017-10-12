@@ -2,11 +2,13 @@
 
 Steps to run - 
 
-    npm install
+    yarn install
     
     Run development build - 
-      npm run build:dev
-      npm run dev-server
+      yarn build:dev
+      yarn dev-server
 
     Run production build - 
       yarn build
+      yarn global add serve
+      serve -s build

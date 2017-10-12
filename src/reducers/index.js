@@ -1,7 +1,6 @@
 import {combineReducers} from 'redux';
-import { ADD_EXPENSE, ADD_BALANCE, SET_BALANCE, ADD_EVENT, SET_VIEW, SORT_DATE, SET_DATE,DELETE_EVENT } from '../actions';
+import { ADD_EXPENSE, ADD_BALANCE, SET_BALANCE, ADD_EVENT, SET_VIEW, SET_DATE,DELETE_EVENT } from '../actions';
 import moment from 'moment';
-
 
 function expenses( state = [], action) {
     switch (action.type){
@@ -32,7 +31,6 @@ function eventBalances( state = {mainBalance:{},accountBalance:0,selectedEvent:{
             return state;
     }
 }
-
 
 const rootReducers = combineReducers({expenses,eventBalances});
 

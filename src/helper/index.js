@@ -3,7 +3,6 @@ import moment from 'moment';
 export function calculateBalance(date,expenses,mainBalance,balanceDate,currentDate) {
     
     let balance = mainBalance;
-    let mainDate = balanceDate;
     let isChanged = false; 
     const startDate = moment(moment(currentDate).startOf('month').add(date-1,'days').format('YYYY-MM-DD'));
     expenses.map( (item,index) => {

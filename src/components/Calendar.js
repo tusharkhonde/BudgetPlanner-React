@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {Table,Button} from 'react-bootstrap';
+import {Table} from 'react-bootstrap';
 import moment from 'moment';
 import {setBalance,setInfoView,setDate} from '../actions';
 import {calculateBalance} from '../helper';
@@ -39,6 +39,8 @@ class Calendar extends Component{
         this.setState({selectedView: viewState});
         if(viewState === 'calendar') 
             this.props.setInfoView('hide');
+        if(viewState === 'events')
+            this.props.setBalance(0);
         
     }
 
@@ -52,6 +54,7 @@ class Calendar extends Component{
             () => {setDate(this.state.date) })
         
         this.props.setInfoView('hide');
+        this.props.setBalance(0);
     }
 
     render(){
