@@ -1,4 +1,4 @@
-# React application
+# Budget React application
 
 Steps to run - 
 

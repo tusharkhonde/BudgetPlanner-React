@@ -7,7 +7,7 @@ class App extends Component{
     render(){
         return(
             <div>
-                <h1>Reside Finance Planner</h1>
+                <h1>Finance Planner</h1>
                 <Slider/>
                 <Calendar/>
                 <RightBox/>
