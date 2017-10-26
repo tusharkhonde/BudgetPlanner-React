@@ -1,4 +1,6 @@
-# Budget React application
+# Budget App
+
+ Budget/Expenses calculator using React/redux.
 
 Steps to run - 
 
